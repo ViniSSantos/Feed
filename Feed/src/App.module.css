@@ -1,0 +1,11 @@
+.wrapper{
+    max-width: 70rem;
+    margin: 2ren auto;
+    padding: 0 1rem;
+
+    display: grid;                      /*Torna possível ter elementos um ao lado do outro em uma mensma Div*/
+    grid-template-columns: 256px 1fr;   /*fr = ocupa tudo mais é Flexível*/
+    gap: 2rem;                          /*1 rem =16; 2 rem = 32px*/ /*espaçamento entre as colunas*/
+    align-items: flex-start;
+
+}

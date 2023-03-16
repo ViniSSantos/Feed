@@ -2,6 +2,7 @@
  background: var(--gray-800);       /*Minhas variaveis de cor*/
  border-radius: 8px;                /*Arredonda as bordas*/
  overflow: hidden;                  /*hidden = Esconde o excesso, OverFlow*/  
+ margin-top: 1rem;
 }
 
 .cover {
@@ -14,6 +15,7 @@
     display: flex;                  
     flex-direction: column;         /*Quebrou/Exibiu em colunas abaixo, nao ao lado como default */
     align-items: center;
+    padding-top: 1rem;
 }
 
 .sidebar footer {

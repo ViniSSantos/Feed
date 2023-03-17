@@ -16,6 +16,31 @@
     flex-direction: column;         /*Quebrou/Exibiu em colunas abaixo, nao ao lado como default */
     align-items: center;
     padding-top: 1rem;
+    margin-top: -3rem;
+   /* margin-top: calc(0px -1.5rem - 6px);*/
+}
+
+.avatar {
+   /* box-sizing: initial;    /*Ocupa os espaços pra fora, à +*/
+    width: 4rem;
+    height: 4rem;
+    /*width: calc(3rem + 12px);
+    height: calc(3rem + 12px);*/
+    border-radius: 8px;
+    border: 4px solid var(--gray-800);
+    outline: 2px solid var(--green-500);    /*Borda por cima das bordas*/
+}
+
+.profile strong {
+    margin-top: 1rem;
+    color: var(--gray-100);
+    line-height: 1.6;           /*linha invisivel de separação*/
+}
+
+.profile span{
+    margin-top: 0.875rem;       /* 0.875/16 = 14px... que queremos usar*/
+    border-top: 1.5rem;
+    line-height: 1.6;
 }
 
 .sidebar footer {
@@ -30,11 +55,20 @@
     border: 1px solid var(--green-500);
     border-radius: 8px;
     height: 50px;
-    padding: 0 1.5rem;      /*Dá espaçamento ao lado e abaixo pds.. align center*/
+    padding: 0 1rem;      /*Dá espaçamento ao lado e abaixo pds.. align center*/
     font-weight: bold;      /*Peso da font*/
     display: block;
     text-decoration: none;
 
     display: flex;
     align-items: center;    /*Trouxe o texto do botão para o centro*/
+
+    gap: 0.5rem;   /*Funciona pq usamos display flex*/
+
+    transition: color 0.1s, background-color 0.1s;
+}
+
+.sidebar footer a:hover {
+    background: var(--green-500);
+    color: var(--white);
 }

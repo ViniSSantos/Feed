@@ -2,7 +2,7 @@
  background: var(--gray-800);       /*Minhas variaveis de cor*/
  border-radius: 8px;                /*Arredonda as bordas*/
  overflow: hidden;                  /*hidden = Esconde o excesso, OverFlow*/  
- margin-top: 1rem;
+ margin-top: 0.2rem;
 }
 
 .cover {

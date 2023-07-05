@@ -69,3 +69,62 @@
     border: 4px solid var(--gray-800);
     outline: 2px solid var(--green-500); 
 }
+
+.commentForm{
+    width: 100%;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-600);
+}
+
+.commentForm textarea{
+    width: 100%;
+    border: 0;
+    padding: 1rem;
+    background: var(--gray-900);
+    border-radius: 8px;
+    color: var(--gray-100);
+    resize: vertical; /* Permite que o usuário redimensione a altura do elemento */
+    min-height: 8rem;
+    line-height: 1.4rem;
+    margin-top: 1rem;
+    outline-color: var(--green-500);
+}
+
+.commentForm footer{
+    visibility: hidden; /* Esconde o elemento */
+    max-height: 0; /* Define a altura máxima do elemento como 0 */
+}
+
+
+:focus-within {
+    /* Estilos aplicados quando qualquer elemento filho do elemento pai recebe o foco */
+    /* Essa pseudo-classe se aplica ao elemento pai, não aos elementos filhos */
+    /* Os estilos definidos aqui serão aplicados quando qualquer elemento filho receber o foco */
+}
+.commentForm:focus-within footer{
+    visibility: visible; /* Torna o elemento visível quando o elemento pai está em foco */
+    max-height: none; /* Remove a altura máxima do elemento quando o elemento pai está em foco */
+}
+
+.commentForm button[type='submit']{
+    background: var(--green-500); /* Define o fundo do botão como verde-500 */
+    border-radius: 8px; /* Adiciona bordas arredondadas ao botão */
+    border: 0; /* Remove a borda do botão */
+    padding: 0 1rem; /* Adiciona preenchimento horizontal de 0 a 1 rem */
+    height: 2.5rem; /* Define a altura do botão como 2.5 rem */
+    color: var(--gray-900); /* Define a cor do texto do botão como cinza-900 */
+    font-weight: bold; /* Define a espessura da fonte como negrito */
+    font-size: 1rem; /* Define o tamanho da fonte como 1 rem */
+    margin-top: 1rem; /* Adiciona uma margem superior de 1 rem */
+
+    transition: filter 0.2s; /* Aplica uma transição suave à propriedade "filter" durante 0.2 segundos */
+}
+
+.commentList{
+    margin-top: 2rem;
+}
+
+.commentForm button[type='submit']:hover{
+    filter: brightness(0.8); /* Reduz o brilho do botão em 20% ao passar o mouse */
+}

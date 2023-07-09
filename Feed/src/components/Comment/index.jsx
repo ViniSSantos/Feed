@@ -2,6 +2,7 @@ import { BsTrashFill } from 'react-icons/bs'
 import { BiLike } from 'react-icons/bi'
 
 import styles from './Comment.module.css';
+import { ThumbsUp, Trash } from 'phosphor-react';
 
 export function Comment (){
     return (
@@ -17,7 +18,7 @@ export function Comment (){
 
                         </div>
                         <button title='Deletar comentário'>
-                            <BsTrashFill/>
+                            <Trash />
                         </button>
                     </header>
 
@@ -25,8 +26,10 @@ export function Comment (){
                 </div>
 
                 <footer>
-                    <BiLike/>
+                    
                     Aplaudir <span>20</span>
+                    <div></div>
+                    <BiLike></BiLike>
                 </footer>
 
             </div>

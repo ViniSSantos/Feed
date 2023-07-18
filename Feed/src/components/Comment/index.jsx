@@ -9,7 +9,7 @@ export function Comment (){
         <div className={styles.comment}>
             <img src="https://avatars.githubusercontent.com/u/86122206?v=4" alt=""/>
 
-            <div className={styles.comementBox}>
+            <div className={styles.commentBox}>
                 <div className={styles.commentContent}>
                     <header>
                         <div className={styles.authorAndTime}>
@@ -27,9 +27,9 @@ export function Comment (){
 
                 <footer>
                     
-                    Aplaudir <span>20</span>
+                    Aplaudir <span> 20</span>
                     <div></div>
-                    <BiLike></BiLike>
+                    <BiLike className={styles.bilike}></BiLike>
                 </footer>
 
             </div>

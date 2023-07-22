@@ -1,13 +1,15 @@
-import { BsTrashFill } from 'react-icons/bs'
 import { BiLike } from 'react-icons/bi'
-
 import styles from './Comment.module.css';
 import { ThumbsUp, Trash } from 'phosphor-react';
+import { Avatar } from '../Avatar';
 
 export function Comment (){
     return (
         <div className={styles.comment}>
-            <img src="https://avatars.githubusercontent.com/u/86122206?v=4" alt=""/>
+            <Avatar 
+                bordaCaixaAvatar={false}
+                src="https://avatars.githubusercontent.com/u/86122206?v=4"
+            />
 
             <div className={styles.commentBox}>
                 <div className={styles.commentContent}>

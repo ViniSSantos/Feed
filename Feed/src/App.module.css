@@ -10,3 +10,25 @@
     align-items: flex-start;
 
 }
+                    /*Por usar unidade de medida relativa(rem), tudo se ajusta de acordo com o
+                        font-size do HTML (Unidade de medida relativa ao tamanho da fonte da página)*/
+
+/*Relativo ao nosso ambiente mobile - Utilização de MediaQuery*/
+@media(max-width: 728px){
+   /* html{
+        font-size: 12px     Por estar usando rem em tudo, quando a font é menor, tudo se ajusta automaticamente
+                                Só que não podemos usar px, valor bruto e sim em percentual, aplicar regra de 3
+    } 
+        Se queremos usar 14px e sabemos que o 16px é o nosso 100%
+            16 -> 100%
+            14 -> X
+                14 x 100 / 16 = 87,5
+    */
+    html {
+        font-size: 87.5%;
+    }
+    .wrapper{
+        grid-template-columns : 1fr; /*Deixou apenas em 1 coluna quando a tela for do determinado tamanho*/
+    }
+
+}

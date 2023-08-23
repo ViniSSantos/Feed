@@ -50,12 +50,13 @@ export function App() {
         />
         <main>
           {/*Retorna os POST e sua Props, atravé do map() */}
-          {infoPosts.map(post => {
+          {infoPosts.map(item => {
             return (
               <Post 
-                author={post.author}
-                content={post.content}
-                publishedAt={post.publishedAt}  
+                key={item.id}  // Add unique key
+                author={item.author}
+                content={item.content}
+                publishedAt={item.publishedAt}  
               />
             )
           })}

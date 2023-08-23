@@ -2,18 +2,18 @@ import { Comment } from './Comment/Comment';
 import { Avatar } from './Avatar';
 import styles from './Post.module.css';
 
-export function Post (props) {
-    console.log(props);
+export function Post ({author}) {
+   // console.log(props); -> Esse log quebrou a aplicação pois se usamos destructor, não podemos usar as props.
 
 
     return (
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <Avatar src="https://avatars.githubusercontent.com/u/86122206?v=4"/>
+                    <Avatar src={author.avatarUrl}/>
                     <div className={styles.authorInfo}>
                         <strong>Vinícius S. Santos</strong>
-                        <span>Web Developer</span>
+                        <span >Web Developer</span>
                     </div>
                 </div>
                 <time title='30 de Março às 08:23h' dateTime='2023-03-30 08:23:11' >Publicado há 1h</time>

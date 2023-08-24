@@ -1,10 +1,17 @@
+import { format } from 'date-fns'; //Lib pra Trabalahr com varios tipos de data no JS
+import  ptBR from 'date-fns/locale/pt-BR'; //Idiomas dos formatos das datas
+
 import { Comment } from './Comment/Comment';
 import { Avatar } from './Avatar';
 import styles from './Post.module.css';
 
-export function Post ({author}) {
+export function Post ({author, publishedAt}) {
    // console.log(props); -> Esse log quebrou a aplicação pois se usamos destructor, não podemos usar as props.
-
+    
+   //1parm: date, composição "dd, LLLL, HH:mm", {locale :idioma} -> Usamos "dd, 'de' LLLL 'às' HH:mm'h'" - "(string duplas e simples " '' ") pra imprimir e não reconhecer que é formato da data  
+   const formatPublishedAt = format(publishedAt, "dd, 'de' LLLL 'às' HH:mm'h'", {
+    locale: ptBR,
+   })
 
     return (
         <article className={styles.post}>
@@ -16,8 +23,8 @@ export function Post ({author}) {
                         <span >{author.role}</span>
                     </div>
                 </div>
-                <time title='30 de Março às 08:23h' dateTime='2023-03-30 08:23:11' >
-                    
+                <time title='' dateTime='2023-03-30 08:23:11' >
+                    {formatPublishedAt}
                     
                 </time>
             </header>

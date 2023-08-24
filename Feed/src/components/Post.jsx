@@ -12,11 +12,14 @@ export function Post ({author}) {
                 <div className={styles.author}>
                     <Avatar src={author.avatarUrl}/>
                     <div className={styles.authorInfo}>
-                        <strong>Vinícius S. Santos</strong>
-                        <span >Web Developer</span>
+                        <strong>{author.name}</strong>
+                        <span >{author.role}</span>
                     </div>
                 </div>
-                <time title='30 de Março às 08:23h' dateTime='2023-03-30 08:23:11' >Publicado há 1h</time>
+                <time title='30 de Março às 08:23h' dateTime='2023-03-30 08:23:11' >
+                    
+                    
+                </time>
             </header>
 
             <div className={styles.content}>

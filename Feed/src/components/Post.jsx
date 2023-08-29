@@ -32,7 +32,10 @@ export function Post ({ author, publishedAt, content }) {
    function CriarNovoComentario (){
     event.preventDefault(); //Quando não queremos o comportamento defult do action e sim passamos uma função.
 
-    //Retorna todos os demais anteriores itens e add + 1
+    //Retornar todos os demais anteriores itens e add + 1
+    //comments.push(3) || setComments([1,2,3])
+    
+    //...comments Spred Operator (...variavel) copia os já existentes
     setComments([...comments, comments.length + 1]);
    };
 

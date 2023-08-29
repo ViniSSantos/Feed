@@ -5,6 +5,7 @@ import { Sidebar } from "./components/Sidebar";
 import "./global.css"; 
 import styles from "./App.module.css";
 
+/*Siulando um response.data da API */
 const infoPosts = [
   {
     id: 1,
@@ -49,7 +50,7 @@ export function App() {
         <Sidebar
         />
         <main>
-          {/*Retorna os POST e sua Props, atravé do map() */}
+          {/*Map na var, pra retorna valores que serão usados como Props para o Post, Extraidas atravé do map() */}
           {infoPosts.map(item => {
             return (
               <Post 

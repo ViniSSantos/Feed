@@ -22,14 +22,15 @@ export function Post ({ author, publishedAt, content }) {
     addSuffix: true    
    });
 
-   //Funcao SetState setVariavel
+   //Criamos um array de comentários(comments)
    const [comments, setComments] = useState([
     1,
     2,
    ]);
 
+   //Funcao SetState set+Variavel
    function CriarNovoComentario (){
-    event.preventDefault();
+    event.preventDefault(); //Quando não queremos o comportamento defult do action e sim passamos uma função.
 
     //Retorna todos os demais anteriores itens e add + 1
     setComments([...comments, comments.length + 1]);

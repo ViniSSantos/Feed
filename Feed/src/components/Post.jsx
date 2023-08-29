@@ -35,7 +35,7 @@ export function Post ({ author, publishedAt, content }) {
     //Retornar todos os demais anteriores itens e add + 1
     //comments.push(3) || setComments([1,2,3])
     
-    //...comments Spred Operator (...variavel) copia os já existentes
+    //...comments Spred Operator (...variavel) copia os já existentes, mede o tamanho e add +1.
     setComments([...comments, comments.length + 1]);
    };
 

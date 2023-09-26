@@ -22,7 +22,9 @@ export function Post ({ author, publishedAt, content }) {
    });
 
    //Criamos um array de comentários(comments)
-   const [comments, setComments] = useState(['Poste legal']);
+   const [comments, setComments] = useState([
+     'Poste legal'
+    ])
 
    //Funcao SetState            set+Variavel
    const [novoTextoComentario, setNovoTextoComentario] = useState('');
@@ -41,8 +43,11 @@ export function Post ({ author, publishedAt, content }) {
    function handleNovoTextoComentario (event) {
         setNovoTextoComentario(event.target.value)
         //console.log('teste');
-   }
+    };
 
+   function deleteComment (commet) {
+    console.log(commet);
+   };
    
 
 
@@ -113,7 +118,13 @@ export function Post ({ author, publishedAt, content }) {
             <div className={styles.commentList}>
             {
                 comments.map(comment => {
-                    return <Comment key={comment} content={comment} />
+                    return (
+                    <Comment 
+                        key={comment}
+                        content={comment}
+                        onDeleteComment={deleteComment} 
+                    />
+                    )
                 })
             }
             </div>
